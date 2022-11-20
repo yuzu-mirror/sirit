@@ -7,11 +7,11 @@
 #pragma once
 
 #include <bit>
-#include <span>
 #include <cassert>
 #include <concepts>
 #include <cstddef>
 #include <functional>
+#include <span>
 #include <string_view>
 #include <unordered_map>
 #include <variant>
