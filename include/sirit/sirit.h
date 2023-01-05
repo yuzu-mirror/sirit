@@ -1160,6 +1160,14 @@ public:
     /// TBD
     Id OpSubgroupAllEqualKHR(Id result_type, Id predicate);
 
+    // Result is true only in the active invocation with the lowest id in the group, otherwise
+    // result is false.
+    Id OpGroupNonUniformElect(Id result_type, Id scope);
+
+    // Result is the Value of the invocation from the active invocation with the lowest id in the
+    // group to all active invocations in the group.
+    Id OpGroupNonUniformBroadcastFirst(Id result_type, Id scope, Id value);
+
     // Result is the Value of the invocation identified by the id Id to all active invocations in
     // the group.
     Id OpGroupNonUniformBroadcast(Id result_type, Id scope, Id value, Id id);
